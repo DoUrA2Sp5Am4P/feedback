@@ -59,7 +59,7 @@ form.addEventListener("submit", function(event) {
 const app = initializeApp(firebaseConfig);
 const database = getDatabase();
  				 const db = getDatabase();
-                     set(ref(db, 'users/' + "a"), {
+                     set(ref(db,'feedback/'), {
     [userId]: output,
   });
   event.preventDefault();
