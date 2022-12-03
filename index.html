@@ -35,9 +35,6 @@
  vkBridge.send("VRWebInit", {});
 const startParams = new URLSearchParams(window.location.search);
 const userId = startParams.get("user_id");
-	    console.log(userId);
-let idU = userId;
-let idU2 = "id"+idU;
  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
  import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
  const firebaseConfig = {
@@ -63,7 +60,7 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase();
  				 const db = getDatabase();
                      set(ref(db, 'users/' + "a"), {
-    [idU2]: output,
+    [userId]: output,
   });
   event.preventDefault();
 }, false);
